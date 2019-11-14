@@ -25,6 +25,9 @@
   <component name="ProjectId" id="1TWFVTbKfuXxLEeChSM09HseHTs" />
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/TrainingByProject-master" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -38,7 +41,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MyFirstTest">
+  <component name="RunManager" selected="JUnit.MyFirstTest.trainingSearchLocations">
     <configuration name="MyFirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="automation" />
       <option name="PACKAGE_NAME" value="" />
@@ -58,21 +61,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyFirstTest.trainingSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="automation" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MyFirstTest" />
-      <option name="METHOD_NAME" value="trainingSearch" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MyFirstTest.trainingSearchLocations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="automation" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyFirstTest" />
       <option name="METHOD_NAME" value="trainingSearchLocations" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyFirstTest.trainingSearchSkills" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyFirstTest" />
+      <option name="METHOD_NAME" value="trainingSearchSkills" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,10 +93,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MyFirstTest" />
-        <item itemvalue="JUnit.MyFirstTest.verifyNewsPage" />
         <item itemvalue="JUnit.MyFirstTest.trainingSearchLocations" />
-        <item itemvalue="JUnit.MyFirstTest.trainingSearch" />
+        <item itemvalue="JUnit.MyFirstTest.verifyNewsPage" />
+        <item itemvalue="JUnit.MyFirstTest.trainingSearchSkills" />
+        <item itemvalue="JUnit.MyFirstTest" />
         <item itemvalue="JUnit.MyFirstTest.notVerifyLogIn" />
       </list>
     </recent_temporary>
