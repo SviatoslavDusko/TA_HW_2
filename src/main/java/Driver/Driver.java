@@ -9,9 +9,6 @@ public abstract class Driver {
     }
 
     public static WebDriver getWebDriver(){
-//        if (webDriver == null) {
-//
-//        }
         return webDriver;
     }
 

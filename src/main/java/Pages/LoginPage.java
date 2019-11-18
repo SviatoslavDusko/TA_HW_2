@@ -1,12 +1,6 @@
 package Pages;
 
-import Driver.Driver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends AbstractPage {
     private By signInUpperRightButton = By.xpath("//p[@class='header-auth__signin']");
@@ -18,18 +12,14 @@ public class LoginPage extends AbstractPage {
     private By textWithInvalidSignIn = By.xpath("//div[@class='popup__error-message ng-binding']");
     private By userName = By.xpath("//div[@class='dropdown user-info-desktop']//div[@class='user-info__name']");
 
-    private By leftUpperTrainingListButtonWait = By.xpath("//a[@class='main-nav__item'][contains(text(),'Training list')]");
     private By rightUpperSignInButtonWait = By.xpath("//a[@class='main-nav__item'][contains(text(),'Training list')]");
     private By inputEmailWait = By.id("signInEmail");
-    private By modalBodyWait = By.xpath("//div[@class='modal-body']");
     private By modalSignInWindow = By.xpath("//div[@class='popup-wrapper']");
     private By rightUpperUserNameWait = By.xpath("//div[@class='dropdown user-info-desktop']//div[@class='user-info__name'][contains(text(),'Sviatoslav-Petro Dusko')]");
 
-    public LoginPage openSignInModalWindow() {
-//        waitBy(leftUpperTrainingListButtonWait);
+    public void openSignInModalWindow() {
         waitBy(rightUpperSignInButtonWait);
         getElement(signInUpperRightButton).click();
-        return this;
     }
 
     public LoginPage enterUserData(String email, String password) {

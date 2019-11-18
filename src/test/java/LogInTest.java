@@ -1,6 +1,5 @@
 import Pages.BO.HomeBO;
 import Pages.BO.LoginBO;
-import Pages.HomePage;
 import org.junit.Test;
 
 public class LogInTest extends BaseTest {
@@ -8,7 +7,8 @@ public class LogInTest extends BaseTest {
     public void verifyLogIn() {
         new HomeBO()
                 .isMainPageAppears()
-                .changeLanguage("english");
+                .openChangeLanguageButtonClick()
+                .chooseLanguage("english");
         new LoginBO()
                 .openSignInWindow()
                 .isModalLogInWindowDisplayed()
@@ -20,7 +20,8 @@ public class LogInTest extends BaseTest {
     public void notVerifyLogIn() {
         new HomeBO()
                 .isMainPageAppears()
-                .changeLanguage("english");
+                .openChangeLanguageButtonClick()
+                .chooseLanguage("english");
         new LoginBO()
                 .openSignInWindow()
                 .isModalLogInWindowDisplayed()

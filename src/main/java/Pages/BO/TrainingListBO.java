@@ -4,8 +4,6 @@ import Pages.TrainingListPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
-import java.util.List;
-
 public class TrainingListBO {
     TrainingListPage trainingListPage;
 
@@ -101,7 +99,7 @@ public class TrainingListBO {
     }
 
     public TrainingListBO isEmptySearchResultByWord(String word) {
-        Assert.assertTrue("List with results is not empty", trainingListPage.getListCheckBoxes().size() == 0);
+        Assert.assertEquals(trainingListPage.getListCheckBoxes().size(), 0);
         return this;
     }
 

@@ -6,19 +6,36 @@ import org.junit.Assert;
 public class HomeBO {
     private HomePage homePage;
 
-    public HomeBO(){
+    public HomeBO() {
         homePage = new HomePage();
     }
 
-    public void changeLanguage(String language){
+    public HomeBO openChangeLanguageButtonClick() {
         homePage
-                .changeLanguageButtonClick()
+                .openChangeLanguageButtonClick();
+        return this;
+    }
+
+    public HomeBO closeChangeLanguageButtonClick() {
+        homePage
+                .closeChangeLanguageButtonClick();
+        return this;
+    }
+
+    public HomeBO chooseLanguage(String language) {
+        homePage
                 .chooseLanguage(language);
+        return this;
+    }
+
+    public HomeBO verifyLanguageChange(String language) {
+        Assert.assertTrue("Language is not changed", homePage.getLanguage().getText().toLowerCase().equals(language.toLowerCase()));
+        return this;
     }
 
 
-    public HomeBO isMainPageAppears(){
-        Assert.assertTrue("Main page is not appears",homePage.isMainPageDisplayed());
+    public HomeBO isMainPageAppears() {
+        Assert.assertTrue("Main page is not appears", homePage.isMainPageDisplayed());
         return this;
     }
 }

@@ -1,5 +1,5 @@
 import Driver.Driver;
-import Pages.HomePage;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -12,9 +12,6 @@ public class BaseTest extends Driver {
         initDriver();
         getWebDriver().manage().window().maximize();
         getWebDriver().get("https://training.by/#!/Home");
-
-        WebElement appearsMainPage = getWebDriver().findElement(By.xpath("//div[@class='hero-banner__content']"));
-        Assert.assertTrue("Page is not appear", appearsMainPage.isDisplayed());
     }
 
     @After
