@@ -8,6 +8,6 @@ public class FAQTest extends BaseTest {
                 .verifyLogIn();
         new FAQBO()
                 .moveToFAQ()
-                .isTrainingListPageDisplayed();
+                .verifyTrainingListPageDisplayed();
     }
 }

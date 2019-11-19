@@ -16,8 +16,7 @@ public class FAQBO {
         return this;
     }
 
-    public FAQBO isTrainingListPageDisplayed() {
+    public void verifyTrainingListPageDisplayed() {
         Assert.assertTrue("'Training list' page not displayed", faqPage.isActiveFAQButton());
-        return this;
     }
 }

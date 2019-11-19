@@ -16,29 +16,25 @@ public class HomePage extends AbstractPage {
 
     private By mainPageAppears = By.xpath("//div[@class='hero-banner__content']");
 
-    public HomePage openChangeLanguageButtonClick() {
+    public void openChangeLanguageButtonClick() {
         waitBy(homePageWait);
         getElement(changeLanguageButton).click();
-        return this;
     }
 
-    public HomePage closeChangeLanguageButtonClick() {
+    public void closeChangeLanguageButtonClick() {
         getElement(changeLanguageButton).click();
-        return this;
     }
 
-    public HomePage chooseLanguage(String language) {
+    public void chooseLanguage(String language) {
         waitBy(dropDownChangeLanguageWait);
-        if (language.toLowerCase().equals("english")) {
+        if (language.toLowerCase().equals(getElement(chooseEnglishLanguage).getText().toLowerCase())) {
             getElement(chooseEnglishLanguage).click();
-        } else if (language.toLowerCase().equals("русский")) {
+        } else if (language.toLowerCase().equals(getElement(chooseRussianLanguage).getText().toLowerCase())) {
             getElement(chooseRussianLanguage);
-        }
-        if (language.toLowerCase().equals("українська")) {
+        }else if (language.toLowerCase().equals(getElement(chooseUkrainianLanguage).getText().toLowerCase())) {
             getElement(chooseUkrainianLanguage);
         }
         waitBy(rightUpperSignInButtonWait);
-        return this;
     }
 
     public WebElement getLanguage() {

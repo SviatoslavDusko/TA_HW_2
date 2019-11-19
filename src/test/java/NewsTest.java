@@ -8,9 +8,9 @@ public class NewsTest extends BaseTest {
                 .verifyLogIn();
         new NewsBO()
                 .newsButtonClick()
-                .isNewsPageDisplayed()
+                .verifyNewsPageDisplayed(NEWS)
                 .materialsButtonClick()
-                .isMaterialsPageDisplyed();
+                .verifyMaterialsPageDisplayed(MATERIALS);
     }
 
 }

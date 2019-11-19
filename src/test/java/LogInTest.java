@@ -6,27 +6,27 @@ public class LogInTest extends BaseTest {
     @Test
     public void verifyLogIn() {
         new HomeBO()
-                .isMainPageAppears()
+                .verifyMainPageAppears()
                 .openChangeLanguageButtonClick()
-                .chooseLanguage("english");
+                .chooseLanguage(ENGLISH);
         new LoginBO()
                 .openSignInWindow()
-                .isModalLogInWindowDisplayed()
-                .LogIn("swiatikdusko@gmail.com", "kom87lans12")
-                .isDisplayedUserName("Sviatoslav-Petro Dusko");
+                .verifyModalLogInWindowDisplayed()
+                .LogIn(VALID_EMAIL, VALID_PASSWORD)
+                .verifyDisplayedUserName(USER_NAME);
     }
 
     @Test
     public void notVerifyLogIn() {
         new HomeBO()
-                .isMainPageAppears()
+                .verifyMainPageAppears()
                 .openChangeLanguageButtonClick()
-                .chooseLanguage("english");
+                .chooseLanguage(ENGLISH);
         new LoginBO()
                 .openSignInWindow()
-                .isModalLogInWindowDisplayed()
-                .LogIn("swiatikdusko@gmail.com", "kom87lans1")
-                .isDisplayedFailedLoginErrorMessage();
+                .verifyModalLogInWindowDisplayed()
+                .LogIn(VALID_EMAIL, NOT_VALID_PASSWORD)
+                .verifyDisplayedFailedLoginErrorMessage();
     }
 
 }

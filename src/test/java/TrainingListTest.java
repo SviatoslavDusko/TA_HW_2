@@ -8,19 +8,19 @@ public class TrainingListTest extends BaseTest {
                 .verifyLogIn();
         new TrainingListBO()
                 .moveToTrainingListPage()
-                .isTrainingListPageDisplayed()
-                .openSearchListAndClickBySkills()
-                .isBySkillsActiveButtonDisplayed()
-                .searchTrainingsBySkillsByWord("Java", "Java")
-                .isSearchResultByWordJavaValid()
+                .verifyTrainingListPageDisplayed()
+                .openSearchListAndClickBySkills(BYSKILLS)
+                .verifyBySkillsActiveButtonDisplayed(BYSKILLS)
+                .searchTrainingsBySkillsByWord(JAVA, JAVA)
+                .verifySearchResultByWordJavaValid(JAVA,HRTAACADEMY)
                 .cleanedAllCheckBoxes()
-                .openSearchListAndClickBySkills()
-                .isBySkillsActiveButtonDisplayed()
-                .searchTrainingsBySkillsByCheckBoxesWithWord("DATA", "data")
-                .isSearchResultByWordValid("data")
+                .openSearchListAndClickBySkills(BYSKILLS)
+                .verifyBySkillsActiveButtonDisplayed(BYSKILLS)
+                .searchTrainingsBySkillsByCheckBoxesWithWord(DATA, DATA)
+                .verifySearchResultByWordValid(DATA)
                 .cleanedAllCheckBoxes()
-                .searchGetTextInput("Pascal")
-                .isEmptySearchResultByWord("Pascal");
+                .searchGetTextInput(PASCAL)
+                .verifyEmptySearchResult();
     }
 
     @Test
@@ -29,11 +29,11 @@ public class TrainingListTest extends BaseTest {
                 .verifyLogIn();
         new TrainingListBO()
                 .moveToTrainingListPage()
-                .isTrainingListPageDisplayed()
-                .openSearchListAndClickByLocations()
-                .isByLocationsActiveButtonDisplayed()
-                .searchTrainingByCityAndCountry("Lviv", "Ukraine")
-                .isAllResultsByCityValid("Lviv");
+                .verifyTrainingListPageDisplayed()
+                .openSearchListAndClickByLocations(BYLOCATIONS)
+                .verifyByLocationsActiveButtonDisplayed(BYLOCATIONS)
+                .searchTrainingByCityAndCountry(LVIV, UKRAINE)
+                .verifyAllResultsByCityValid(LVIV);
     }
 
 }

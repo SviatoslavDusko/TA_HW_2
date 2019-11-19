@@ -11,30 +11,26 @@ public class HomeBO {
     }
 
     public HomeBO openChangeLanguageButtonClick() {
-        homePage
-                .openChangeLanguageButtonClick();
+        homePage.openChangeLanguageButtonClick();
         return this;
     }
 
-    public HomeBO closeChangeLanguageButtonClick() {
-        homePage
-                .closeChangeLanguageButtonClick();
-        return this;
+    public void closeChangeLanguageButtonClick() {
+        homePage.closeChangeLanguageButtonClick();
     }
 
     public HomeBO chooseLanguage(String language) {
-        homePage
-                .chooseLanguage(language);
+        homePage.chooseLanguage(language);
         return this;
     }
 
     public HomeBO verifyLanguageChange(String language) {
-        Assert.assertTrue("Language is not changed", homePage.getLanguage().getText().toLowerCase().equals(language.toLowerCase()));
+        Assert.assertEquals(homePage.getLanguage().getText().toLowerCase(), language.toLowerCase());
         return this;
     }
 
 
-    public HomeBO isMainPageAppears() {
+    public HomeBO verifyMainPageAppears() {
         Assert.assertTrue("Main page is not appears", homePage.isMainPageDisplayed());
         return this;
     }

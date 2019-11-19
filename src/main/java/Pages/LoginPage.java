@@ -32,17 +32,11 @@ public class LoginPage extends AbstractPage {
 
     public void signInClick() {
         getElement(signInButton).click();
-//            waitBy(modalBodyWait);
-//        }
     }
 
-    public Boolean isFailedSignInMessageDisplayed() {
+    public boolean isFailedSignInMessageDisplayed() {
         waitBy(textWithInvalidSignIn);
-        if (isElementDisplayed(textWithInvalidSignIn)) {
-            return true;
-        } else {
-            return false;
-        }
+        return isElementDisplayed(textWithInvalidSignIn);
     }
 
     public String getUserName() {
@@ -50,11 +44,8 @@ public class LoginPage extends AbstractPage {
         return getElement(userName).getText();
     }
 
-    public Boolean isLogInModalWindowDisplayed() {
+    public boolean isLogInModalWindowDisplayed() {
         waitBy(modalSignInWindow);
-        if (isElementDisplayed(modalSignInWindow)) {
-            return true;
-        } else
-            return false;
+        return isElementDisplayed(modalSignInWindow);
     }
 }

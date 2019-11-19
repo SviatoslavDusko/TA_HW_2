@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
 public class TrainingListBO {
-    TrainingListPage trainingListPage;
+    private TrainingListPage trainingListPage;
 
     public TrainingListBO() {
         trainingListPage = new TrainingListPage();
@@ -16,17 +16,17 @@ public class TrainingListBO {
         return this;
     }
 
-    public TrainingListBO openSearchListAndClickBySkills() {
+    public TrainingListBO openSearchListAndClickBySkills(String bySkills) {
         trainingListPage
                 .openSearchListWithCheckbox()
-                .bySkillsOrLocationChooseClick("By skills");
+                .bySkillsOrLocationChooseClick(bySkills);
         return this;
     }
 
-    public TrainingListBO openSearchListAndClickByLocations() {
+    public TrainingListBO openSearchListAndClickByLocations(String byLocations) {
         trainingListPage
                 .openSearchListWithCheckbox()
-                .bySkillsOrLocationChooseClick("By locations");
+                .bySkillsOrLocationChooseClick(byLocations);
         return this;
     }
 
@@ -69,44 +69,43 @@ public class TrainingListBO {
         return this;
     }
 
-    public TrainingListBO isTrainingListPageDisplayed() {
+    public TrainingListBO verifyTrainingListPageDisplayed() {
         Assert.assertTrue("'Training list' page not displayed", trainingListPage.isActiveTrainingListButton());
         return this;
     }
 
-    public TrainingListBO isBySkillsActiveButtonDisplayed() {
-        Assert.assertTrue("'By skills' button is not active", trainingListPage.isActiveBySkillsButton());
+    public TrainingListBO verifyBySkillsActiveButtonDisplayed(String bySkills) {
+        Assert.assertTrue("'By skills' button is not active", trainingListPage.isActiveBySkillsButton(bySkills));
         return this;
     }
 
-    public TrainingListBO isByLocationsActiveButtonDisplayed() {
-        Assert.assertTrue("'By locations' button is not active", trainingListPage.isActiveByLocationButton());
+    public TrainingListBO verifyByLocationsActiveButtonDisplayed(String byLocation) {
+        Assert.assertTrue("'By locations' button is not active", trainingListPage.isActiveByLocationButton(byLocation));
         return this;
     }
 
-    public TrainingListBO isSearchResultByWordJavaValid() {
+    public TrainingListBO verifySearchResultByWordJavaValid(String java, String hrTaAcademy) {
         for (WebElement option : trainingListPage.getListWithSearchElements()) {
-            Assert.assertTrue(option.getText().toLowerCase().contains("java".toLowerCase()) || option.getText().toLowerCase().contains("HR/TA ACADEMY KHARKIV WINTER 2020".toLowerCase()));
+            Assert.assertTrue(option.getText().toLowerCase().contains(java.toLowerCase())
+                    || option.getText().toLowerCase().contains(hrTaAcademy.toLowerCase()));
         }
         return this;
     }
 
-    public TrainingListBO isSearchResultByWordValid(String word) {
+    public TrainingListBO verifySearchResultByWordValid(String word) {
         for (WebElement option : trainingListPage.getListWithSearchElements()) {
             Assert.assertTrue(option.getText().toLowerCase().contains(word.toLowerCase()));
         }
         return this;
     }
 
-    public TrainingListBO isEmptySearchResultByWord(String word) {
+    public void verifyEmptySearchResult() {
         Assert.assertEquals(trainingListPage.getListCheckBoxes().size(), 0);
-        return this;
     }
 
-    public TrainingListBO isAllResultsByCityValid(String city) {
+    public void verifyAllResultsByCityValid(String city) {
         for (WebElement option : trainingListPage.getListWithSearchElementsByCity()) {
             Assert.assertTrue(option.getText().toLowerCase().contains(city.toLowerCase()));
         }
-        return this;
     }
 }

@@ -1,6 +1,7 @@
 package Pages;
 
 import Driver.Driver;
+import com.sun.org.apache.bcel.internal.Constants;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 
-public class AbstractPage {
+class AbstractPage  {
     private static WebDriverWait wait = new WebDriverWait(Driver.getWebDriver(), 30, 500);
 
     WebElement getElement(By locator) {
@@ -20,21 +21,16 @@ public class AbstractPage {
         return (Driver.getWebDriver().findElements(locator));
     }
 
-    public void waitBy(By locator) {
+    void waitBy(By locator) {
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
         isElementDisplayed(locator);
     }
 
-    public void waitAndDisplayedBy(By locator) {
-        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-        isElementDisplayed(locator);
-    }
-
-    public void sendKey(String key, By locator) {
+    void sendKey(String key, By locator) {
         getElement(locator).sendKeys(key);
     }
 
-    public boolean isElementDisplayed(By locator) {
+    boolean isElementDisplayed(By locator) {
         try {
             Driver.getWebDriver().findElement(locator).isDisplayed();
             return true;
@@ -43,7 +39,7 @@ public class AbstractPage {
         }
     }
 
-    public void clickOnCheckBoxWithKey(String key, By locator) {
+    void clickOnCheckBoxWithKey(String key, By locator) {
         List<WebElement> checkBoxes = getElements(locator);
         for (WebElement option : checkBoxes) {
             if (option.getText().toLowerCase().equals(key.toLowerCase())) {
@@ -53,7 +49,7 @@ public class AbstractPage {
         }
     }
 
-    public void clickOnCheckBoxesWithKey(String key, By locator) {
+    void clickOnCheckBoxesWithKey(String key, By locator) {
         List<WebElement> checkBoxes = getElements(locator);
         for (WebElement option : checkBoxes) {
             if (option.getText().toLowerCase().contains(key.toLowerCase())) {
@@ -62,14 +58,14 @@ public class AbstractPage {
         }
     }
 
-    public void clickOnActiveCheckBoxes(By locator) {
+    void clickOnActiveCheckBoxes(By locator) {
         List<WebElement> checkBoxesActiveList = getElements(locator);
         for (WebElement option : checkBoxesActiveList) {
             option.click();
         }
     }
 
-    public void chooseCountryOnTrainingList(String country, By locator) {
+    void chooseCountryOnTrainingList(String country, By locator) {
         List<WebElement> countries = getElements(locator);
         for (WebElement option : countries) {
             if (option.getText().toLowerCase().contains(country.toLowerCase())) {

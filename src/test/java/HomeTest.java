@@ -5,11 +5,11 @@ public class HomeTest extends BaseTest {
     @Test
     public void changeLanguageVerify() {
         new HomeBO()
-                .isMainPageAppears()
+                .verifyMainPageAppears()
                 .openChangeLanguageButtonClick()
-                .chooseLanguage("english")
+                .chooseLanguage(ENGLISH)
                 .openChangeLanguageButtonClick()
-                .verifyLanguageChange("english")
+                .verifyLanguageChange(ENGLISH)
                 .closeChangeLanguageButtonClick();
 
     }

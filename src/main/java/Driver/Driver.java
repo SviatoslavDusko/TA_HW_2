@@ -12,7 +12,7 @@ public abstract class Driver {
         return webDriver;
     }
 
-    public void quitDriver(){
+    protected void quitDriver(){
         if (webDriver != null) {
             webDriver.quit();
             webDriver = null;

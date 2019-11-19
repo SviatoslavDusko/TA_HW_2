@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="120c9c49-ca41-41a4-8db7-b9cdbb1ab736" name="Default Changelist" comment="" />
+    <list default="true" id="120c9c49-ca41-41a4-8db7-b9cdbb1ab736" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Driver/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Driver/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/AbstractPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BO/FAQBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BO/FAQBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BO/HomeBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BO/HomeBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BO/LoginBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BO/LoginBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BO/NewsBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BO/NewsBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BO/TrainingListBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BO/TrainingListBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/FAQPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/FAQPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/NewsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/NewsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/TrainingListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/TrainingListPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FAQTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FAQTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/HomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HomeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LogInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LogInTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/NewsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/NewsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TrainingListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TrainingListTest.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +37,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -24,11 +48,14 @@
     </option>
   </component>
   <component name="ProjectId" id="1TWFVTbKfuXxLEeChSM09HseHTs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/TrainingByProject-master" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -48,21 +75,21 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.TrainingListTest.trainingSearchLocations">
-    <configuration name="LogInTest.notVerifyLogIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FAQTest.moveToFAQPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="automation" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LogInTest" />
-      <option name="METHOD_NAME" value="notVerifyLogIn" />
+      <option name="MAIN_CLASS_NAME" value="FAQTest" />
+      <option name="METHOD_NAME" value="moveToFAQPage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogInTest.verifyLogIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HomeTest.changeLanguageVerify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="automation" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LogInTest" />
-      <option name="METHOD_NAME" value="verifyLogIn" />
+      <option name="MAIN_CLASS_NAME" value="HomeTest" />
+      <option name="METHOD_NAME" value="changeLanguageVerify" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -103,8 +130,8 @@
         <item itemvalue="JUnit.TrainingListTest.trainingSearchLocations" />
         <item itemvalue="JUnit.TrainingListTest.trainingSearchSkills" />
         <item itemvalue="JUnit.NewsTest.verifyNewsPage" />
-        <item itemvalue="JUnit.LogInTest.notVerifyLogIn" />
-        <item itemvalue="JUnit.LogInTest.verifyLogIn" />
+        <item itemvalue="JUnit.HomeTest.changeLanguageVerify" />
+        <item itemvalue="JUnit.FAQTest.moveToFAQPage" />
       </list>
     </recent_temporary>
   </component>
@@ -120,5 +147,18 @@
       <updated>1573567967327</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -1,17 +1,14 @@
 import Driver.Driver;
 
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
-public class BaseTest extends Driver {
+public class BaseTest extends Driver implements Constants{
     @Before
     public void setUp() {
         initDriver();
         getWebDriver().manage().window().maximize();
-        getWebDriver().get("https://training.by/#!/Home");
+        getWebDriver().get(EPAMTRAINING);
     }
 
     @After

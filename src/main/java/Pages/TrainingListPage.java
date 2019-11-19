@@ -40,25 +40,23 @@ public class TrainingListPage extends AbstractPage {
         return this;
     }
 
-    public TrainingListPage closeSearchListWithCheckbox() {
+    public void closeSearchListWithCheckbox() {
         waitBy(closeSearchListWithCheckboxButton);
         getElement(closeSearchListWithCheckboxButton).click();
-        return this;
     }
 
-    public TrainingListPage bySkillsOrLocationChooseClick(String bySkillsOrByLocation) {
+    public void bySkillsOrLocationChooseClick(String bySkillsOrByLocation) {
         waitBy(dropDownMenuWithSkillsWait);
         waitBy(bySkillsOrLocationsNotActiveButton);
-        if (getElement(bySkillsOrLocationsNotActiveButton).getText().toLowerCase().equals(bySkillsOrByLocation.toLowerCase())) {
+        if (getElement(bySkillsOrLocationsNotActiveButton).getText().toLowerCase()
+                .equals(bySkillsOrByLocation.toLowerCase())) {
             getElement(bySkillsOrLocationsNotActiveButton).click();
         }
-        return this;
     }
 
     public TrainingListPage enterTextToSearchBySkillsOrLocationsInput(String searchText) {
         waitBy(searchBySkillsOrLocationsWait);
         sendKey(searchText, searchBySkillsOrLocationsInput);
-//        getElement(searchBySkillsOrLocationsInput).sendKeys(searchText);
         return this;
     }
 
@@ -82,26 +80,23 @@ public class TrainingListPage extends AbstractPage {
 
     public TrainingListPage deleteAllTicks() {
         waitBy(ulWithCheckBoxes);
-        waitAndDisplayedBy(checkBoxesActive);
+        waitBy(checkBoxesActive);
             clickOnActiveCheckBoxes(checkBoxesActive);
         return this;
     }
 
     public boolean isActiveTrainingListButton() {
         waitBy(activeTrainingListButton);
-        if (isElementDisplayed(activeTrainingListButton)) {
-            return true;
-        } else
-            return false;
+        return isElementDisplayed(activeTrainingListButton);
     }
 
-    public boolean isActiveBySkillsButton() {
+    public boolean isActiveBySkillsButton(String bySkills) {
         waitBy(bySkillsOrLocationsActiveButton);
-        if (getElement(bySkillsOrLocationsActiveButton).getText().toLowerCase().equals("By skills".toLowerCase())) {
-            return true;
-        } else {
-            return false;
-        }
+        return getElement(bySkillsOrLocationsActiveButton).getText().toLowerCase().equals(bySkills.toLowerCase());
+    }
+    public boolean isActiveByLocationButton(String byLocations) {
+        waitBy(bySkillsOrLocationsActiveButton);
+        return getElement(bySkillsOrLocationsActiveButton).getText().toLowerCase().equals(byLocations.toLowerCase());
     }
 
     public List<WebElement> getListWithSearchElements() {
@@ -112,14 +107,6 @@ public class TrainingListPage extends AbstractPage {
         return getElements(checkBoxesSkillsOrLocation);
     }
 
-    public boolean isActiveByLocationButton() {
-        waitBy(bySkillsOrLocationsActiveButton);
-        if (getElement(bySkillsOrLocationsActiveButton).getText().toLowerCase().equals("By locations".toLowerCase())) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 
     public List<WebElement> getListWithSearchElementsByCity() {
         return getElements(searchResultsByCityText);

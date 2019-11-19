@@ -21,15 +21,15 @@ public class LoginBO {
         return this;
     }
 
-    public void isDisplayedFailedLoginErrorMessage() {
+    public void verifyDisplayedFailedLoginErrorMessage() {
         Assert.assertTrue("LogIn failed is not displayed", loginPage.isFailedSignInMessageDisplayed());
     }
 
-    public void isDisplayedUserName(String userName) {
+    public void verifyDisplayedUserName(String userName) {
         Assert.assertEquals(userName, loginPage.getUserName());
     }
 
-    public LoginBO isModalLogInWindowDisplayed() {
+    public LoginBO verifyModalLogInWindowDisplayed() {
         Assert.assertTrue("'Log in' modal window is not displayed'", loginPage.isLogInModalWindowDisplayed());
         return this;
     }
